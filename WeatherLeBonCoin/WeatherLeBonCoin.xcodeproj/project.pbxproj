@@ -14,8 +14,12 @@
 		93521C7622DF6823008A4FD8 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C7522DF6823008A4FD8 /* WeatherItem.swift */; };
 		93521C7822DF6A0A008A4FD8 /* WeatherParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C7722DF6A0A008A4FD8 /* WeatherParser.swift */; };
 		93521C7A22DF724E008A4FD8 /* WeatherAlamofireRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C7922DF724E008A4FD8 /* WeatherAlamofireRouter.swift */; };
+		93521C7C22DF771A008A4FD8 /* WeatherWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C7B22DF771A008A4FD8 /* WeatherWebService.swift */; };
+		93521C7E22DF7752008A4FD8 /* WeatherResponseCompletionInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C7D22DF7752008A4FD8 /* WeatherResponseCompletionInterpreter.swift */; };
+		93521C8022DF77A6008A4FD8 /* WeatherTypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C7F22DF77A6008A4FD8 /* WeatherTypeAlias.swift */; };
+		93521C8222DF77FD008A4FD8 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C8122DF77FD008A4FD8 /* WeatherManager.swift */; };
+		93521C8922DF81DA008A4FD8 /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C8822DF81DA008A4FD8 /* WeatherListTableViewController.swift */; };
 		93BA37E222DF5BFC002EBF9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA37E122DF5BFC002EBF9A /* AppDelegate.swift */; };
-		93BA37E422DF5BFC002EBF9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA37E322DF5BFC002EBF9A /* ViewController.swift */; };
 		93BA37E722DF5BFC002EBF9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37E522DF5BFC002EBF9A /* Main.storyboard */; };
 		93BA37E922DF5BFD002EBF9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37E822DF5BFD002EBF9A /* Assets.xcassets */; };
 		93BA37EC22DF5BFD002EBF9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37EA22DF5BFD002EBF9A /* LaunchScreen.storyboard */; };
@@ -29,9 +33,13 @@
 		93521C7522DF6823008A4FD8 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
 		93521C7722DF6A0A008A4FD8 /* WeatherParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherParser.swift; sourceTree = "<group>"; };
 		93521C7922DF724E008A4FD8 /* WeatherAlamofireRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlamofireRouter.swift; sourceTree = "<group>"; };
+		93521C7B22DF771A008A4FD8 /* WeatherWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWebService.swift; sourceTree = "<group>"; };
+		93521C7D22DF7752008A4FD8 /* WeatherResponseCompletionInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseCompletionInterpreter.swift; sourceTree = "<group>"; };
+		93521C7F22DF77A6008A4FD8 /* WeatherTypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypeAlias.swift; sourceTree = "<group>"; };
+		93521C8122DF77FD008A4FD8 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		93521C8822DF81DA008A4FD8 /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
 		93BA37DE22DF5BFC002EBF9A /* WeatherLeBonCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherLeBonCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BA37E122DF5BFC002EBF9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93BA37E322DF5BFC002EBF9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93BA37E622DF5BFC002EBF9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93BA37E822DF5BFD002EBF9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93BA37EB22DF5BFD002EBF9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 		93521C6D22DF66C1008A4FD8 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				93521C8122DF77FD008A4FD8 /* WeatherManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -126,7 +135,10 @@
 		93521C7022DF66DA008A4FD8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				93521C7F22DF77A6008A4FD8 /* WeatherTypeAlias.swift */,
 				93521C7922DF724E008A4FD8 /* WeatherAlamofireRouter.swift */,
+				93521C7B22DF771A008A4FD8 /* WeatherWebService.swift */,
+				93521C7D22DF7752008A4FD8 /* WeatherResponseCompletionInterpreter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -156,8 +168,17 @@
 		93521C7422DF672C008A4FD8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				93521C8822DF81DA008A4FD8 /* WeatherListTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		93521C8322DF7983008A4FD8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				93BA37ED22DF5BFD002EBF9A /* Info.plist */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		93BA37D522DF5BFC002EBF9A = {
@@ -181,14 +202,13 @@
 		93BA37E022DF5BFC002EBF9A /* WeatherLeBonCoin */ = {
 			isa = PBXGroup;
 			children = (
+				93521C8322DF7983008A4FD8 /* Settings */,
 				93BA37F322DF6382002EBF9A /* App delegate */,
 				93BA37E822DF5BFD002EBF9A /* Assets.xcassets */,
 				93521C6022DF6623008A4FD8 /* Core Data */,
-				93BA37ED22DF5BFD002EBF9A /* Info.plist */,
 				93BA37EA22DF5BFD002EBF9A /* LaunchScreen.storyboard */,
 				93521C6122DF662D008A4FD8 /* Main */,
 				93521C6222DF6652008A4FD8 /* Utils */,
-				93BA37E322DF5BFC002EBF9A /* ViewController.swift */,
 			);
 			path = WeatherLeBonCoin;
 			sourceTree = "<group>";
@@ -333,10 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93521C8022DF77A6008A4FD8 /* WeatherTypeAlias.swift in Sources */,
+				93521C7E22DF7752008A4FD8 /* WeatherResponseCompletionInterpreter.swift in Sources */,
 				93521C7A22DF724E008A4FD8 /* WeatherAlamofireRouter.swift in Sources */,
 				93521C6622DF6678008A4FD8 /* TypeAlias.swift in Sources */,
 				93521C6822DF6686008A4FD8 /* Array.swift in Sources */,
-				93BA37E422DF5BFC002EBF9A /* ViewController.swift in Sources */,
+				93521C7C22DF771A008A4FD8 /* WeatherWebService.swift in Sources */,
+				93521C8922DF81DA008A4FD8 /* WeatherListTableViewController.swift in Sources */,
+				93521C8222DF77FD008A4FD8 /* WeatherManager.swift in Sources */,
 				93BA37E222DF5BFC002EBF9A /* AppDelegate.swift in Sources */,
 				93521C7822DF6A0A008A4FD8 /* WeatherParser.swift in Sources */,
 				93521C6A22DF669D008A4FD8 /* LocationServiceManager.swift in Sources */,
