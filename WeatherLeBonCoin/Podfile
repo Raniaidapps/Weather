@@ -5,7 +5,6 @@ target 'WeatherLeBonCoin' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for WeatherLeBonCoin
-pod 'Alamofire', '~> 4.0.0'
+pod 'Alamofire', '~> 4.8.2'
 
 end

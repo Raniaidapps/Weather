@@ -61,6 +61,7 @@
 		93BA37E022DF5BFC002EBF9A /* WeatherLeBonCoin */ = {
 			isa = PBXGroup;
 			children = (
+				93BA37F322DF6382002EBF9A /* New Group */,
 				93BA37E122DF5BFC002EBF9A /* AppDelegate.swift */,
 				93BA37E322DF5BFC002EBF9A /* ViewController.swift */,
 				93BA37E522DF5BFC002EBF9A /* Main.storyboard */,
@@ -69,6 +70,13 @@
 				93BA37ED22DF5BFD002EBF9A /* Info.plist */,
 			);
 			path = WeatherLeBonCoin;
+			sourceTree = "<group>";
+		};
+		93BA37F322DF6382002EBF9A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		976D65285EBCFAABC216E841 /* Frameworks */ = {
@@ -85,7 +93,6 @@
 				77B988D9405B3B17857AEC49 /* Pods-WeatherLeBonCoin.debug.xcconfig */,
 				9743D99F6DCA1953362AE396 /* Pods-WeatherLeBonCoin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,7 +107,7 @@
 				93BA37DA22DF5BFC002EBF9A /* Sources */,
 				93BA37DB22DF5BFC002EBF9A /* Frameworks */,
 				93BA37DC22DF5BFC002EBF9A /* Resources */,
-				87F86D611A32F227CF11238F /* [CP] Embed Pods Frameworks */,
+				1D41F8D1ACD29BEFAB067494 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,7 +165,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		87F86D611A32F227CF11238F /* [CP] Embed Pods Frameworks */ = {
+		1D41F8D1ACD29BEFAB067494 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
