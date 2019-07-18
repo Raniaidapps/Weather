@@ -11,10 +11,11 @@ import UIKit
 
 protocol WeatherRouterProtocol {
   func presentPopupLocation()
+  func pushToDetailsViewController(_ item: WeatherForecast)
 }
 
 class WeatherRouter: WeatherRouterProtocol {
-  
+ 
   //Reference to the View Controller (weak to avoid retain cycle).
   private(set) weak var viewController: UIViewController?
   
@@ -45,5 +46,12 @@ class WeatherRouter: WeatherRouterProtocol {
     )
     
     viewController?.present(alert, animated: true)
+  }
+  
+  func pushToDetailsViewController(_ item: WeatherForecast) {
+    
+    let weatherDetailsVC = WeatherDetailsViewController()
+    weatherDetailsVC.weather = item
+    viewController?.navigationController?.pushViewController(weatherDetailsVC, animated: true)
   }
 }

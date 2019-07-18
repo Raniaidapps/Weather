@@ -26,7 +26,6 @@
 		9358572A22E09A57004A4208 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358572922E09A57004A4208 /* Date.swift */; };
 		9358572F22E09F92004A4208 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358572E22E09F92004A4208 /* Reachability.swift */; };
 		9358573122E0AEC3004A4208 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358573022E0AEC3004A4208 /* WeatherDetailsViewController.swift */; };
-		9358573B22E0D290004A4208 /* WeatherLeBonCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358573A22E0D290004A4208 /* WeatherLeBonCoinTests.swift */; };
 		9358574422E0D321004A4208 /* OHHTTPStubsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358574322E0D321004A4208 /* OHHTTPStubsUtil.swift */; };
 		936C008722E06B0D000E50C8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C008622E06B0D000E50C8 /* UIView.swift */; };
 		936C008A22E06B77000E50C8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C008922E06B77000E50C8 /* WeatherTableViewCell.swift */; };
@@ -70,7 +69,6 @@
 		9358572E22E09F92004A4208 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9358573022E0AEC3004A4208 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 		9358573822E0D290004A4208 /* WeatherLeBonCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherLeBonCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9358573A22E0D290004A4208 /* WeatherLeBonCoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLeBonCoinTests.swift; sourceTree = "<group>"; };
 		9358573C22E0D290004A4208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9358574322E0D321004A4208 /* OHHTTPStubsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsUtil.swift; sourceTree = "<group>"; };
 		936C008622E06B0D000E50C8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -226,8 +224,8 @@
 		9358573922E0D290004A4208 /* WeatherLeBonCoinTests */ = {
 			isa = PBXGroup;
 			children = (
+				9358574522E0D3DB004A4208 /* Main */,
 				9358574222E0D2F1004A4208 /* Utils */,
-				9358573A22E0D290004A4208 /* WeatherLeBonCoinTests.swift */,
 				9358573C22E0D290004A4208 /* Info.plist */,
 			);
 			path = WeatherLeBonCoinTests;
@@ -239,6 +237,13 @@
 				9358574322E0D321004A4208 /* OHHTTPStubsUtil.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9358574522E0D3DB004A4208 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		936C008822E06B61000E50C8 /* Views */ = {
@@ -506,7 +511,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9358574422E0D321004A4208 /* OHHTTPStubsUtil.swift in Sources */,
-				9358573B22E0D290004A4208 /* WeatherLeBonCoinTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
