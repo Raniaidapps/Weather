@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7FD465E000ECCA9179FD3D11 /* Pods_WeatherLeBonCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCF3597420596F905C20044 /* Pods_WeatherLeBonCoin.framework */; };
+		932C1C0522E054A700169278 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C1C0422E054A700169278 /* WeatherPresenter.swift */; };
+		932C1C0722E057F500169278 /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C1C0622E057F500169278 /* WeatherRouter.swift */; };
 		93521C6622DF6678008A4FD8 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C6522DF6678008A4FD8 /* TypeAlias.swift */; };
 		93521C6822DF6686008A4FD8 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C6722DF6686008A4FD8 /* Array.swift */; };
 		93521C6A22DF669D008A4FD8 /* LocationServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C6922DF669D008A4FD8 /* LocationServiceManager.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		77B988D9405B3B17857AEC49 /* Pods-WeatherLeBonCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherLeBonCoin.debug.xcconfig"; path = "Target Support Files/Pods-WeatherLeBonCoin/Pods-WeatherLeBonCoin.debug.xcconfig"; sourceTree = "<group>"; };
+		932C1C0422E054A700169278 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
+		932C1C0622E057F500169278 /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
 		93521C6522DF6678008A4FD8 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		93521C6722DF6686008A4FD8 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		93521C6922DF669D008A4FD8 /* LocationServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceManager.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		93521C7122DF6716008A4FD8 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				932C1C0422E054A700169278 /* WeatherPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 		93521C7222DF671E008A4FD8 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				932C1C0622E057F500169278 /* WeatherRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -171,14 +177,6 @@
 				93521C8822DF81DA008A4FD8 /* WeatherListTableViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		93521C8322DF7983008A4FD8 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				93BA37ED22DF5BFD002EBF9A /* Info.plist */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		93BA37D522DF5BFC002EBF9A = {
@@ -202,7 +200,7 @@
 		93BA37E022DF5BFC002EBF9A /* WeatherLeBonCoin */ = {
 			isa = PBXGroup;
 			children = (
-				93521C8322DF7983008A4FD8 /* Settings */,
+				93BA37ED22DF5BFD002EBF9A /* Info.plist */,
 				93BA37F322DF6382002EBF9A /* App delegate */,
 				93BA37E822DF5BFD002EBF9A /* Assets.xcassets */,
 				93521C6022DF6623008A4FD8 /* Core Data */,
@@ -359,10 +357,12 @@
 				93521C6622DF6678008A4FD8 /* TypeAlias.swift in Sources */,
 				93521C6822DF6686008A4FD8 /* Array.swift in Sources */,
 				93521C7C22DF771A008A4FD8 /* WeatherWebService.swift in Sources */,
+				932C1C0522E054A700169278 /* WeatherPresenter.swift in Sources */,
 				93521C8922DF81DA008A4FD8 /* WeatherListTableViewController.swift in Sources */,
 				93521C8222DF77FD008A4FD8 /* WeatherManager.swift in Sources */,
 				93BA37E222DF5BFC002EBF9A /* AppDelegate.swift in Sources */,
 				93521C7822DF6A0A008A4FD8 /* WeatherParser.swift in Sources */,
+				932C1C0722E057F500169278 /* WeatherRouter.swift in Sources */,
 				93521C6A22DF669D008A4FD8 /* LocationServiceManager.swift in Sources */,
 				93521C7622DF6823008A4FD8 /* WeatherItem.swift in Sources */,
 			);

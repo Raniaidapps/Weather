@@ -7,84 +7,92 @@
 //
 
 import UIKit
+import CoreLocation
+
+protocol WeatherViewProtocol: class {
+  func didFetchWeatherSuccess(_ items: [WeatherItem]?)
+  func didFetchWeatherFailure(_ failure: Error?)
+  func locationAuthorizationStatusDidChange()
+  func locationAuthorizationDenied()
+  func didRequestLocationAuthorization()
+}
 
 class WeatherListTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+  
+  // MARK: - Properties
+  
+  /// Reference to the Presenter
+  var presenter: WeatherPresenter?
+  var router: WeatherRouter?
+  
+  /// Default location
+  let location = CLLocation(latitude: 48.85341,
+                            longitude: 2.3488)
+  
+  //Displayed items
+  var weatherItems: [WeatherItem]? {
+    didSet {
+   //   tableView.reloadData()
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    configurePattern()
+    fetchWeatherList()
+  }
+  
+  func fetchWeatherList() {
+    
+    guard let presenter = presenter else {
+      return
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    if presenter.isGeolocEnabled {
+      presenter.fetchWeatherFromCurrentLocation()
+    } else {
+      presenter.fetchWeatherFrom(location)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  }
+  
+  // MARK: - Private methods
+  private func configurePattern() {
+    presenter = WeatherPresenter(view: self)
+    router = WeatherRouter(viewController: self)
+  }
+  
+  // MARK: - Table view data source
+  
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    // #warning Incomplete implementation, return the number of sections
+    return 0
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // #warning Incomplete implementation, return the number of rows
+    return 0
+  }
 }
+
+extension WeatherListTableViewController: WeatherViewProtocol {
+  
+  func locationAuthorizationStatusDidChange() {
+    fetchWeatherList()
+  }
+  
+  func locationAuthorizationDenied() {
+    router?.presentPopupLocation()
+  }
+  
+  func didRequestLocationAuthorization() { }
+  
+  func didFetchWeatherSuccess(_ items: [WeatherItem]?) {
+    self.weatherItems = items
+  }
+  
+  func didFetchWeatherFailure(_ failure: Error?) {
+    print("An error has occured")
+  }
+}
+

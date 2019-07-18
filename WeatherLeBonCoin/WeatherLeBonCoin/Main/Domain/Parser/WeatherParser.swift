@@ -72,7 +72,6 @@ class WeatherParser {
   }
   
   /// Method to convert date to string
-  /// Date Style Medium, shorttimeStyle : 28 janvier 2019 à 10h
   private static func convertDateToString(_ date: Date) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .medium
