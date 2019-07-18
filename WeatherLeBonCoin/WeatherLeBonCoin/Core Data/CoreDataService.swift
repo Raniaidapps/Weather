@@ -26,40 +26,46 @@ class CoreDataService {
   /// - Parameter wind: Double
   /// - Parameter snow: project date
   
-  func addWeather(with date: String,
+  func addWeather(with date: Date,
                   temperature: Double,
                   rain: Double? = nil,
                   wind: Double? = nil,
-                  snow: Bool? = false) {
+                  snow: Bool? = false,
+                  context: NSManagedObjectContext) {
+    let weather = WeatherForecast(context: context)
+    weather.a_date = date
+    weather.a_temperature = temperature
     
-    context.perform {
-      let weather = WeatherForecast(context: self.context)
-      weather.a_date = date
-      weather.a_temperature = temperature
-      
-      if let rain = rain {
-        weather.a_rain = rain
-      }
-      if let wind = wind {
-        weather.a_wind = wind
-      }
-      
-      if let isSnowing = snow {
-        weather.is_snowing = isSnowing
-      }
+    if let rain = rain {
+      weather.a_rain = rain
+    }
+    if let wind = wind {
+      weather.a_wind = wind
+    }
+    
+    if let isSnowing = snow {
+      weather.is_snowing = isSnowing
+    }
+  }
+  
+  func getAndSaveWeatherFromWS(_ items: [WeatherItem]) {
+    self.context.perform {
+      items.forEach({ item in
+        self.addWeather(with: item.date, temperature: item.temperature, rain: item.rain, wind: item.wind, snow: item.snow, context: self.context)
+      })
       self.saveContext()
     }
   }
   
-  func retrieveData(_ closure: (Result<[WeatherForecast], Error>) -> Void) {
+  func retrieveData(_ closure: @escaping ([WeatherForecast]) -> Void) {
     //Prepare the request of type NSFetchRequest  for the entity
     let fetchRequest = NSFetchRequest<WeatherForecast>(entityName: "WeatherForecast")
-    
+    fetchRequest.sortDescriptors = [NSSortDescriptor(key: "a_date", ascending: true)]
     do {
       let result = try context.fetch(fetchRequest)
-      closure(.success(result))
+      closure(result)
     } catch {
-      closure(.failure(error))
+      closure([])
     }
   }
   
@@ -83,14 +89,13 @@ class CoreDataService {
   func managedObject(with managedObjectId:NSManagedObjectID) -> NSManagedObject?{
     do{
       return try self.context.existingObject(with: managedObjectId)
-    }catch(let error){
+    }catch(let error) {
       print("error retreaving object, error: \(error)")
       return nil
     }
   }
   
   // MARK: - Core Data stack
-  
   lazy var persistentContainer: NSPersistentContainer = {
     let container = NSPersistentContainer(name: "WeatherDataModel")
     container.loadPersistentStores(completionHandler: { (storeDescription, error) in

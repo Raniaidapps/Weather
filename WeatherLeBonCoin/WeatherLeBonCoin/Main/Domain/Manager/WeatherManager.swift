@@ -40,13 +40,12 @@ struct WeatherManager {
     
     clearWeatherCache()
     
-    for item in items {
-      CoreDataService.shared.addWeather(with: item.date,
-                                        temperature: item.temperature,
-                                        rain: item.rain,
-                                        wind: item.wind,
-                                        snow: item.snow)
-    }
+  CoreDataService.shared.getAndSaveWeatherFromWS(items)
   }
+  
+  static func retrieveData(_ closure: @escaping ([WeatherForecast]) -> Void) {
+    CoreDataService.shared.retrieveData(closure)
+  }
+  
   
 }

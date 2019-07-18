@@ -95,6 +95,9 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
   }
   
   func fetchWeatherFromCache() {
-    
+    WeatherManager.retrieveData { [weak self] forecasts in
+      
+      
+    }
   }
 }

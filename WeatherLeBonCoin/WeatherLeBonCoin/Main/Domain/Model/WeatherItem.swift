@@ -11,7 +11,7 @@ import UIKit
 class WeatherItem: Codable, CustomStringConvertible {
   
   /// Weather date.
-  let date: String
+  let date: Date
   
   /// Weather temperature value.
   let temperature: Double
@@ -26,7 +26,7 @@ class WeatherItem: Codable, CustomStringConvertible {
   var snow: Bool?
   
   
-  init(date: String, temperature: Double, rain: Double?, wind: Double?, snow: Bool?) {
+  init(date: Date, temperature: Double, rain: Double?, wind: Double?, snow: Bool?) {
     self.date = date
     self.temperature = temperature
     self.rain = rain

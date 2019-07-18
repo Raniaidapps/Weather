@@ -44,6 +44,7 @@ class WeatherListTableViewController: UITableViewController {
     setNavigationBar()
     setupTableView()
     fetchWeatherList()
+    presenter?.fetchWeatherFromCache()
   }
   
   // MARK: - Set up
@@ -110,9 +111,11 @@ class WeatherListTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let weatherItems = weatherItems else { return }
-    let weatherDetailsVC = WeatherDetailsViewController()
     
+    let weatherDetailsVC = WeatherDetailsViewController()
+    weatherDetailsVC.weather = weatherItems[indexPath.row]
     self.navigationController?.pushViewController(weatherDetailsVC, animated: false)
+  }
 }
 
 extension WeatherListTableViewController: WeatherViewProtocol {

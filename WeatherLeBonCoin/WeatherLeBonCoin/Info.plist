@@ -39,5 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Votre position nous aide à déterminer la métèo à proximité</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Votre position nous aide à déterminer la métèo à proximité</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Votre position nous aide à déterminer la métèo à proximité</string>
 </dict>
 </plist>

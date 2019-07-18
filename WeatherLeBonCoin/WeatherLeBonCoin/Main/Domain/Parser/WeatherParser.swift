@@ -57,7 +57,7 @@ class WeatherParser {
         return nil
     }
     
-    return WeatherItem(date: convertDateToString(date),
+    return WeatherItem(date: date,
                        temperature: convertTemperature(ground),
                        rain: rain,
                        wind: wind,
@@ -69,15 +69,5 @@ class WeatherParser {
   /// Method to convert temperature from Kelvin to celsius
   private static func convertTemperature(_ degrees: Double) -> Double {
     return (degrees - 273.15).rounded()
-  }
-  
-  /// Method to convert date to string
-  private static func convertDateToString(_ date: Date) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateStyle = .medium
-    dateFormatter.timeStyle = .short
-    dateFormatter.locale = Locale(identifier: "fr_FR")
-    
-    return dateFormatter.string(from: date)
   }
 }

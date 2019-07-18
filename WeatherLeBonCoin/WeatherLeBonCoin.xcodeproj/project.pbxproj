@@ -116,7 +116,6 @@
 		93521C6B22DF66A5008A4FD8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				9358572B22E09CCA004A4208 /* DAO */,
 				93521C6D22DF66C1008A4FD8 /* Manager */,
 				93521C6E22DF66CC008A4FD8 /* Model */,
 				93521C6F22DF66D1008A4FD8 /* Parser */,
@@ -194,13 +193,6 @@
 				9358573022E0AEC3004A4208 /* WeatherDetailsViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		9358572B22E09CCA004A4208 /* DAO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DAO;
 			sourceTree = "<group>";
 		};
 		936C008822E06B61000E50C8 /* Views */ = {

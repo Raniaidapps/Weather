@@ -17,7 +17,7 @@ extension WeatherForecast {
         return NSFetchRequest<WeatherForecast>(entityName: "WeatherForecast")
     }
 
-    @NSManaged public var a_date: String
+    @NSManaged public var a_date: Date
     @NSManaged public var a_rain: Double
     @NSManaged public var a_temperature: Double
     @NSManaged public var a_wind: Double

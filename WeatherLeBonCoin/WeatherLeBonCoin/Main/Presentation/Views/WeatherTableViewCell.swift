@@ -15,7 +15,7 @@ class WeatherTableViewCell: UITableViewCell {
   var weather : WeatherItem? {
     didSet {
       guard let weather = weather else { return }
-      weatherDateLabel.text = weather.date
+      weatherDateLabel.text = convertDateToString(weather.date)
       weatherTemperatureLabel.text = String(weather.temperature) + " °C"
     }
   }
@@ -50,5 +50,15 @@ class WeatherTableViewCell: UITableViewCell {
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  /// Method to convert date to string
+  private func convertDateToString(_ date: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    dateFormatter.timeStyle = .short
+    dateFormatter.locale = Locale(identifier: "fr_FR")
+    
+    return dateFormatter.string(from: date)
   }
 }
