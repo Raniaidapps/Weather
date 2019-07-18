@@ -56,7 +56,7 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
       
       WeatherManager.retrieveData{ [weak self] forecasts in
         self?.view?.didFetchWeatherSuccess(forecasts)
-
+        
       }
     }) { (error) in
       self.view?.didFetchWeatherFailure(error)

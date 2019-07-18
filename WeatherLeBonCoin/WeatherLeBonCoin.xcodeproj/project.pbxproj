@@ -26,6 +26,8 @@
 		9358572A22E09A57004A4208 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358572922E09A57004A4208 /* Date.swift */; };
 		9358572F22E09F92004A4208 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358572E22E09F92004A4208 /* Reachability.swift */; };
 		9358573122E0AEC3004A4208 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358573022E0AEC3004A4208 /* WeatherDetailsViewController.swift */; };
+		9358573B22E0D290004A4208 /* WeatherLeBonCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358573A22E0D290004A4208 /* WeatherLeBonCoinTests.swift */; };
+		9358574422E0D321004A4208 /* OHHTTPStubsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358574322E0D321004A4208 /* OHHTTPStubsUtil.swift */; };
 		936C008722E06B0D000E50C8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C008622E06B0D000E50C8 /* UIView.swift */; };
 		936C008A22E06B77000E50C8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C008922E06B77000E50C8 /* WeatherTableViewCell.swift */; };
 		937F86B122E07A86002E06F6 /* WeatherDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 937F86AF22E07A86002E06F6 /* WeatherDataModel.xcdatamodeld */; };
@@ -33,9 +35,21 @@
 		93BA37E222DF5BFC002EBF9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA37E122DF5BFC002EBF9A /* AppDelegate.swift */; };
 		93BA37E922DF5BFD002EBF9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37E822DF5BFD002EBF9A /* Assets.xcassets */; };
 		93BA37EC22DF5BFD002EBF9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37EA22DF5BFD002EBF9A /* LaunchScreen.storyboard */; };
+		B4B26426063803CEED0825E1 /* Pods_WeatherLeBonCoinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E36F56BE799FB9DA927BEFD /* Pods_WeatherLeBonCoinTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9358573D22E0D290004A4208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93BA37D622DF5BFC002EBF9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BA37DD22DF5BFC002EBF9A;
+			remoteInfo = WeatherLeBonCoin;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3E36F56BE799FB9DA927BEFD /* Pods_WeatherLeBonCoinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherLeBonCoinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B988D9405B3B17857AEC49 /* Pods-WeatherLeBonCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherLeBonCoin.debug.xcconfig"; path = "Target Support Files/Pods-WeatherLeBonCoin/Pods-WeatherLeBonCoin.debug.xcconfig"; sourceTree = "<group>"; };
 		932C1C0422E054A700169278 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		932C1C0622E057F500169278 /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
@@ -55,6 +69,10 @@
 		9358572922E09A57004A4208 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9358572E22E09F92004A4208 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9358573022E0AEC3004A4208 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
+		9358573822E0D290004A4208 /* WeatherLeBonCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherLeBonCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9358573A22E0D290004A4208 /* WeatherLeBonCoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLeBonCoinTests.swift; sourceTree = "<group>"; };
+		9358573C22E0D290004A4208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9358574322E0D321004A4208 /* OHHTTPStubsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsUtil.swift; sourceTree = "<group>"; };
 		936C008622E06B0D000E50C8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		936C008922E06B77000E50C8 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		937F86B022E07A86002E06F6 /* WeatherDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -66,9 +84,19 @@
 		93BA37ED22DF5BFD002EBF9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9743D99F6DCA1953362AE396 /* Pods-WeatherLeBonCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherLeBonCoin.release.xcconfig"; path = "Target Support Files/Pods-WeatherLeBonCoin/Pods-WeatherLeBonCoin.release.xcconfig"; sourceTree = "<group>"; };
 		CBCF3597420596F905C20044 /* Pods_WeatherLeBonCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherLeBonCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6D763BC18567799CFAD4E71 /* Pods-WeatherLeBonCoinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherLeBonCoinTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherLeBonCoinTests/Pods-WeatherLeBonCoinTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F4E609F0B94CBA0CD2195D14 /* Pods-WeatherLeBonCoinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherLeBonCoinTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherLeBonCoinTests/Pods-WeatherLeBonCoinTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9358573522E0D290004A4208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B26426063803CEED0825E1 /* Pods_WeatherLeBonCoinTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93BA37DB22DF5BFC002EBF9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +223,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		9358573922E0D290004A4208 /* WeatherLeBonCoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				9358574222E0D2F1004A4208 /* Utils */,
+				9358573A22E0D290004A4208 /* WeatherLeBonCoinTests.swift */,
+				9358573C22E0D290004A4208 /* Info.plist */,
+			);
+			path = WeatherLeBonCoinTests;
+			sourceTree = "<group>";
+		};
+		9358574222E0D2F1004A4208 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9358574322E0D321004A4208 /* OHHTTPStubsUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		936C008822E06B61000E50C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +261,7 @@
 			children = (
 				937F86AF22E07A86002E06F6 /* WeatherDataModel.xcdatamodeld */,
 				93BA37E022DF5BFC002EBF9A /* WeatherLeBonCoin */,
+				9358573922E0D290004A4208 /* WeatherLeBonCoinTests */,
 				93BA37DF22DF5BFC002EBF9A /* Products */,
 				D6211EA9AFF8524F056B6A94 /* Pods */,
 				976D65285EBCFAABC216E841 /* Frameworks */,
@@ -225,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				93BA37DE22DF5BFC002EBF9A /* WeatherLeBonCoin.app */,
+				9358573822E0D290004A4208 /* WeatherLeBonCoinTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				CBCF3597420596F905C20044 /* Pods_WeatherLeBonCoin.framework */,
+				3E36F56BE799FB9DA927BEFD /* Pods_WeatherLeBonCoinTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,6 +313,8 @@
 			children = (
 				77B988D9405B3B17857AEC49 /* Pods-WeatherLeBonCoin.debug.xcconfig */,
 				9743D99F6DCA1953362AE396 /* Pods-WeatherLeBonCoin.release.xcconfig */,
+				E6D763BC18567799CFAD4E71 /* Pods-WeatherLeBonCoinTests.debug.xcconfig */,
+				F4E609F0B94CBA0CD2195D14 /* Pods-WeatherLeBonCoinTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -271,6 +322,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9358573722E0D290004A4208 /* WeatherLeBonCoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9358573F22E0D290004A4208 /* Build configuration list for PBXNativeTarget "WeatherLeBonCoinTests" */;
+			buildPhases = (
+				75BBFBE7DAC024BD37AD903E /* [CP] Check Pods Manifest.lock */,
+				9358573422E0D290004A4208 /* Sources */,
+				9358573522E0D290004A4208 /* Frameworks */,
+				9358573622E0D290004A4208 /* Resources */,
+				2FFC9D2BD0AEFDE478AFBB34 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9358573E22E0D290004A4208 /* PBXTargetDependency */,
+			);
+			name = WeatherLeBonCoinTests;
+			productName = WeatherLeBonCoinTests;
+			productReference = 9358573822E0D290004A4208 /* WeatherLeBonCoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		93BA37DD22DF5BFC002EBF9A /* WeatherLeBonCoin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93BA37F022DF5BFD002EBF9A /* Build configuration list for PBXNativeTarget "WeatherLeBonCoin" */;
@@ -296,10 +367,15 @@
 		93BA37D622DF5BFC002EBF9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "RANIA NAJAH";
 				TargetAttributes = {
+					9358573722E0D290004A4208 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 93BA37DD22DF5BFC002EBF9A;
+					};
 					93BA37DD22DF5BFC002EBF9A = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -319,11 +395,19 @@
 			projectRoot = "";
 			targets = (
 				93BA37DD22DF5BFC002EBF9A /* WeatherLeBonCoin */,
+				9358573722E0D290004A4208 /* WeatherLeBonCoinTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9358573622E0D290004A4208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93BA37DC22DF5BFC002EBF9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +437,45 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherLeBonCoin/Pods-WeatherLeBonCoin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2FFC9D2BD0AEFDE478AFBB34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherLeBonCoinTests/Pods-WeatherLeBonCoinTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherLeBonCoinTests/Pods-WeatherLeBonCoinTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherLeBonCoinTests/Pods-WeatherLeBonCoinTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75BBFBE7DAC024BD37AD903E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherLeBonCoinTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9C1A50824A16494E148E5E2B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,6 +501,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9358573422E0D290004A4208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9358574422E0D321004A4208 /* OHHTTPStubsUtil.swift in Sources */,
+				9358573B22E0D290004A4208 /* WeatherLeBonCoinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93BA37DA22DF5BFC002EBF9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +542,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9358573E22E0D290004A4208 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BA37DD22DF5BFC002EBF9A /* WeatherLeBonCoin */;
+			targetProxy = 9358573D22E0D290004A4208 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		93BA37EA22DF5BFD002EBF9A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -422,6 +562,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9358574022E0D290004A4208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D763BC18567799CFAD4E71 /* Pods-WeatherLeBonCoinTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeatherLeBonCoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rania.najah.WeatherLeBonCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherLeBonCoin.app/WeatherLeBonCoin";
+			};
+			name = Debug;
+		};
+		9358574122E0D290004A4208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E609F0B94CBA0CD2195D14 /* Pods-WeatherLeBonCoinTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeatherLeBonCoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rania.najah.WeatherLeBonCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherLeBonCoin.app/WeatherLeBonCoin";
+			};
+			name = Release;
+		};
 		93BA37EE22DF5BFD002EBF9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -579,6 +759,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9358573F22E0D290004A4208 /* Build configuration list for PBXNativeTarget "WeatherLeBonCoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9358574022E0D290004A4208 /* Debug */,
+				9358574122E0D290004A4208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		93BA37D922DF5BFC002EBF9A /* Build configuration list for PBXProject "WeatherLeBonCoin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
