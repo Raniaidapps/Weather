@@ -48,6 +48,9 @@ class CoreDataService {
     }
   }
   
+  /// Get wheather from WS and save it ( To call savecontext once) .
+  /// - Parameter items: [WeatherItem]
+
   func getAndSaveWeatherFromWS(_ items: [WeatherItem]) {
     self.context.perform {
       items.forEach({ item in
