@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 protocol WeatherViewProtocol: class {
-  func didFetchWeatherSuccess(_ items: [WeatherItem]?)
+  func didFetchWeatherSuccess(_ items: [WeatherForecast]?)
   func didFetchWeatherFailure(_ failure: Error?)
   func locationAuthorizationStatusDidChange()
   func locationAuthorizationDenied()
@@ -30,7 +30,7 @@ class WeatherListTableViewController: UITableViewController {
                             longitude: 2.3488)
   
   //Displayed items
-  var weatherItems: [WeatherItem]? {
+  var weatherItems: [WeatherForecast]? {
     didSet {
       tableView.reloadData()
     }
@@ -44,7 +44,6 @@ class WeatherListTableViewController: UITableViewController {
     setNavigationBar()
     setupTableView()
     fetchWeatherList()
-    presenter?.fetchWeatherFromCache()
   }
   
   // MARK: - Set up
@@ -114,7 +113,7 @@ class WeatherListTableViewController: UITableViewController {
 
     let weatherDetailsVC = WeatherDetailsViewController()
     weatherDetailsVC.weather = weatherItems[indexPath.row]
-    self.navigationController?.pushViewController(weatherDetailsVC, animated: false)
+    self.navigationController?.pushViewController(weatherDetailsVC, animated: true)
   }
 }
 
@@ -130,7 +129,7 @@ extension WeatherListTableViewController: WeatherViewProtocol {
   
   func didRequestLocationAuthorization() { }
   
-  func didFetchWeatherSuccess(_ items: [WeatherItem]?) {
+  func didFetchWeatherSuccess(_ items: [WeatherForecast]?) {
     self.weatherItems = items
   }
   

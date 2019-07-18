@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherDetailsViewController: UIViewController {
   
-  var weather : WeatherItem! {
+  var weather : WeatherForecast! {
     didSet {
       updateViewDetails()
     }
@@ -56,17 +56,15 @@ class WeatherDetailsViewController: UIViewController {
     }
   
   func updateViewDetails() {
-    weatherDateLabel.text = "Date : \(convertDateToString(weather.date))"
-    guard let rain = weather.rain,
-      let wind = weather.wind else { return }
-    weatherRainLabel.text = "Pluie : \(rain)"
-    weatherWindLabel.text = "Vents : \(wind)"
+    weatherDateLabel.text = "Date : \(convertDateToString(weather.a_date))"
+    weatherRainLabel.text = "Pluie : \(weather.a_rain)"
+    weatherWindLabel.text = "Vents : \(weather.a_wind)"
   }
   
   // MARK: - Set up
   func setNavigationBarAndView() {
     self.view.backgroundColor = .white
-    self.navigationController?.navigationBar.topItem?.title = " \(weather.temperature) °C"
+    self.navigationController?.navigationBar.topItem?.title = " \(weather.a_temperature) °C"
   }
   
   func setupLayout() {

@@ -32,20 +32,17 @@ struct WeatherManager {
     WeatherWebService.fetchWeatherFrom(location, succes, failure)
   }
   
-  static func clearWeatherCache() {
+  static func clearCurrentWeatherCache() {
     CoreDataService.shared.deleteAllData()
   }
   
   static func saveWeatherInCache(with items: [WeatherItem]) {
     
-    clearWeatherCache()
-    
-  CoreDataService.shared.getAndSaveWeatherFromWS(items)
+    clearCurrentWeatherCache()
+    CoreDataService.shared.getAndSaveWeatherFromWS(items)
   }
   
   static func retrieveData(_ closure: @escaping ([WeatherForecast]) -> Void) {
     CoreDataService.shared.retrieveData(closure)
   }
-  
-  
 }

@@ -12,11 +12,11 @@ class WeatherTableViewCell: UITableViewCell {
   
   static let cellIdentifier = "WeatherTableViewCell"
   
-  var weather : WeatherItem? {
+  var weather : WeatherForecast? {
     didSet {
       guard let weather = weather else { return }
-      weatherDateLabel.text = convertDateToString(weather.date)
-      weatherTemperatureLabel.text = String(weather.temperature) + " °C"
+      weatherDateLabel.text = convertDateToString(weather.a_date)
+      weatherTemperatureLabel.text = String(weather.a_temperature) + " °C"
     }
   }
   

@@ -52,7 +52,7 @@ class CoreDataService {
   /// - Parameter items: [WeatherItem]
 
   func getAndSaveWeatherFromWS(_ items: [WeatherItem]) {
-    self.context.perform {
+    self.context.performAndWait {
       items.forEach({ item in
         self.addWeather(with: item.date, temperature: item.temperature, rain: item.rain, wind: item.wind, snow: item.snow, context: self.context)
       })

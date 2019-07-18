@@ -15,7 +15,6 @@ protocol WeatherPresenterPresenterProtocol: class {
   func requestAuthorization()
   func fetchWeatherFrom(_ location: CLLocation?)
   func fetchWeatherFromCurrentLocation()
-  func fetchWeatherFromCache()
 }
 
 class WeatherPresenter: WeatherPresenterPresenterProtocol {
@@ -53,9 +52,12 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
     guard let location = location else { return }
     
     WeatherManager.getWeatherFrom(location: location, succes: { (weather) in
-      self.view?.didFetchWeatherSuccess(weather)
       WeatherManager.saveWeatherInCache(with: weather)
       
+      WeatherManager.retrieveData{ [weak self] forecasts in
+        self?.view?.didFetchWeatherSuccess(forecasts)
+
+      }
     }) { (error) in
       self.view?.didFetchWeatherFailure(error)
     }
@@ -92,12 +94,5 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
       return true
     }
     return false
-  }
-  
-  func fetchWeatherFromCache() {
-    WeatherManager.retrieveData { [weak self] forecasts in
-      
-      
-    }
   }
 }
