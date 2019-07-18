@@ -36,14 +36,37 @@ class WeatherListTableViewController: UITableViewController {
     }
   }
   
+  // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
     configurePattern()
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+    setNavigationBar()
+    setupTableView()
     fetchWeatherList()
   }
   
+  // MARK: - Set up
+  func setNavigationBar() {
+    
+    if #available(iOS 11.0, *) {
+      self.navigationController?.navigationBar.prefersLargeTitles = true
+    } else {}
+    
+    self.navigationController?.navigationBar.topItem?.title = "Météo"
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:
+      UIBarButtonItem.SystemItem.refresh, target: self, action:
+      #selector(refrechLocationRequest))
+  }
+  
+  func setupTableView() {
+    tableView.register(WeatherTableViewCell.self, forCellReuseIdentifier: WeatherTableViewCell.cellIdentifier)
+  }
+  
+  // TODO: Add method to refresh location ⚠️
+  @objc func refrechLocationRequest() { }
+  
+  // MARK: - Request methods
   func fetchWeatherList() {
     
     guard let presenter = presenter else {
@@ -64,21 +87,19 @@ class WeatherListTableViewController: UITableViewController {
   }
   
   // MARK: - Table view data source
-  
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-    
-    guard let weatherItems = weatherItems else {
-      return UITableViewCell()
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.cellIdentifier, for: indexPath) as? WeatherTableViewCell,
+      let weatherItems = weatherItems else {
+        return UITableViewCell()
     }
-    
+
     let currentLastItem = weatherItems[indexPath.row]
-    cell.textLabel?.text = currentLastItem.date
+    cell.weather = currentLastItem
     return cell
   }
   
