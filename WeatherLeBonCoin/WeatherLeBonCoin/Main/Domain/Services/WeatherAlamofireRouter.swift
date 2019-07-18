@@ -19,8 +19,10 @@ private struct paramsKeys {
 enum WeatherAlamofireRouter: URLRequestConvertible {
   
   static var baseURL =  "https://www.infoclimat.fr/public-api"
-  static var authValue = "VE4AFw5wVXdUeVptUCZQeQNrADVaLAEmBHgGZVw5VisAa1Y3UTEDZQNtWidXeAcxByoGZQswVGRXPFEpCnheP1Q%2BAGwOZVUyVDtaP1B%2FUHsDLQBhWnoBJgRhBmNcL1Y3AGBWLFE6A2UDclo5V2YHNwcrBnkLNVRpVzJRNQpkXjpUNQBmDmVVMlQkWidQZVAwAzIANlpnAWgEMQY1XDFWMABnVjNRNwNoA3JaMVdgBzAHMgZlCzxUblc0USkKeF5EVEQAeQ4tVXVUblp%2BUH1QMQNuADQ%3D"
-  static var cValue = "07e305e577c1aa99d86d5a7230e15d8b"
+  
+  static let authValue    = "CRMFEg9xBiRSf1BnAnQCKwVtBDEOeAUiVCgLaAFkVShWPVIzAmJdO1E/VyoEKwo8Un8HZA41U2MCaQd/C3kHZgljBWkPZAZhUj1QNQItAikFKwRlDi4FIlQ+C2wBclU/VjRSKAJgXTxROlcrBDUKOFJpB3gOLlNqAmQHYQtuB2YJbAVhD2UGbFI1UC0CLQIzBWcEYw5kBWlUNQs6AT9VMlZhUjUCZl09UT5XKwQxCjtSZgdnDjVTaQJpB2MLeQd7CRMFEg9xBiRSf1BnAnQCKwVjBDoOZQ=="
+  
+  static let cValue    = "f689bce901f5c8bf87c8b9c6699b7332"
   
   case getWeather(Double, Double)
   

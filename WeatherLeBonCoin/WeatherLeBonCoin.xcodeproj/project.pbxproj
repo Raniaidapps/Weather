@@ -22,7 +22,6 @@
 		93521C8222DF77FD008A4FD8 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C8122DF77FD008A4FD8 /* WeatherManager.swift */; };
 		93521C8922DF81DA008A4FD8 /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93521C8822DF81DA008A4FD8 /* WeatherListTableViewController.swift */; };
 		93BA37E222DF5BFC002EBF9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA37E122DF5BFC002EBF9A /* AppDelegate.swift */; };
-		93BA37E722DF5BFC002EBF9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37E522DF5BFC002EBF9A /* Main.storyboard */; };
 		93BA37E922DF5BFD002EBF9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37E822DF5BFD002EBF9A /* Assets.xcassets */; };
 		93BA37EC22DF5BFD002EBF9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BA37EA22DF5BFD002EBF9A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -44,7 +43,6 @@
 		93521C8822DF81DA008A4FD8 /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
 		93BA37DE22DF5BFC002EBF9A /* WeatherLeBonCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherLeBonCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BA37E122DF5BFC002EBF9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93BA37E622DF5BFC002EBF9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93BA37E822DF5BFD002EBF9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93BA37EB22DF5BFD002EBF9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93BA37ED22DF5BFD002EBF9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				93521C7422DF672C008A4FD8 /* ViewControllers */,
-				93521C7322DF6728008A4FD8 /* UI */,
 				93521C7222DF671E008A4FD8 /* Router */,
 				93521C7122DF6716008A4FD8 /* Presenter */,
 			);
@@ -161,14 +158,6 @@
 				932C1C0622E057F500169278 /* WeatherRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		93521C7322DF6728008A4FD8 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				93BA37E522DF5BFC002EBF9A /* Main.storyboard */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		93521C7422DF672C008A4FD8 /* ViewControllers */ = {
@@ -298,7 +287,6 @@
 			files = (
 				93BA37EC22DF5BFD002EBF9A /* LaunchScreen.storyboard in Resources */,
 				93BA37E922DF5BFD002EBF9A /* Assets.xcassets in Resources */,
-				93BA37E722DF5BFC002EBF9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,14 +359,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93BA37E522DF5BFC002EBF9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93BA37E622DF5BFC002EBF9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93BA37EA22DF5BFD002EBF9A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -513,6 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherLeBonCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherLeBonCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

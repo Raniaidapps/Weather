@@ -32,7 +32,7 @@ class WeatherListTableViewController: UITableViewController {
   //Displayed items
   var weatherItems: [WeatherItem]? {
     didSet {
-   //   tableView.reloadData()
+      tableView.reloadData()
     }
   }
   
@@ -40,6 +40,7 @@ class WeatherListTableViewController: UITableViewController {
     super.viewDidLoad()
     
     configurePattern()
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
     fetchWeatherList()
   }
   
@@ -65,13 +66,25 @@ class WeatherListTableViewController: UITableViewController {
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-    return 0
+    return 1
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+    
+    guard let weatherItems = weatherItems else {
+      return UITableViewCell()
+    }
+    
+    let currentLastItem = weatherItems[indexPath.row]
+    cell.textLabel?.text = currentLastItem.date
+    return cell
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return 0
+    guard let weatherItems = weatherItems else { return 0 }
+    return weatherItems.count
   }
 }
 
