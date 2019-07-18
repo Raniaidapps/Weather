@@ -12,6 +12,9 @@ import CoreLocation
 
 struct WeatherManager {
   
+  // Fetch Departments validity cache time
+  private static let weatherCacheValidityTime: TimeInterval = Date.oneHour
+  
   // MARK: - Web Services
   
   /// Get the weather list for given location
@@ -25,6 +28,25 @@ struct WeatherManager {
                              succes: FetchWeatherSuccess? = nil,
                              failure: Failure? = nil) {
     
+   
     WeatherWebService.fetchWeatherFrom(location, succes, failure)
   }
+  
+  static func clearWeatherCache() {
+    CoreDataService.shared.deleteAllData()
+  }
+  
+  static func saveWeatherInCache(with items: [WeatherItem]) {
+    
+    clearWeatherCache()
+    
+    for item in items {
+      CoreDataService.shared.addWeather(with: item.date,
+                                        temperature: item.temperature,
+                                        rain: item.rain,
+                                        wind: item.wind,
+                                        snow: item.snow)
+    }
+  }
+  
 }

@@ -15,13 +15,13 @@ protocol WeatherPresenterPresenterProtocol: class {
   func requestAuthorization()
   func fetchWeatherFrom(_ location: CLLocation?)
   func fetchWeatherFromCurrentLocation()
+  func fetchWeatherFromCache()
 }
 
 class WeatherPresenter: WeatherPresenterPresenterProtocol {
   
   //Reference to the View (weak to avoid retain cycle).
   private(set) weak var view: WeatherViewProtocol?
-  
   var isGeolocEnabled: Bool {
     return LocationServiceManager.shared.isServiceAvailable
   }
@@ -38,7 +38,10 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
   }
   
   func requestAuthorization() {
-    NotificationCenter.default.addObserver(self, selector: #selector(locationAuthorizationStatusDidChange), name: NSNotification.Name(rawValue: LocationAuthorizationStatusChangedNotification), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(locationAuthorizationStatusDidChange),
+                                           name: NSNotification.Name(rawValue: LocationAuthorizationStatusChangedNotification),
+                                           object: nil)
+    
     LocationServiceManager.shared.requestAuthorization()
     
     view?.didRequestLocationAuthorization()
@@ -51,6 +54,7 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
     
     WeatherManager.getWeatherFrom(location: location, succes: { (weather) in
       self.view?.didFetchWeatherSuccess(weather)
+      WeatherManager.saveWeatherInCache(with: weather)
       
     }) { (error) in
       self.view?.didFetchWeatherFailure(error)
@@ -88,5 +92,9 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
       return true
     }
     return false
+  }
+  
+  func fetchWeatherFromCache() {
+    
   }
 }

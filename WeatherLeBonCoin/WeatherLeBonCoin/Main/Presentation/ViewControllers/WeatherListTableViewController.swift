@@ -97,7 +97,7 @@ class WeatherListTableViewController: UITableViewController {
       let weatherItems = weatherItems else {
         return UITableViewCell()
     }
-
+    
     let currentLastItem = weatherItems[indexPath.row]
     cell.weather = currentLastItem
     return cell
@@ -107,6 +107,12 @@ class WeatherListTableViewController: UITableViewController {
     guard let weatherItems = weatherItems else { return 0 }
     return weatherItems.count
   }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let weatherItems = weatherItems else { return }
+    let weatherDetailsVC = WeatherDetailsViewController()
+    
+    self.navigationController?.pushViewController(weatherDetailsVC, animated: false)
 }
 
 extension WeatherListTableViewController: WeatherViewProtocol {

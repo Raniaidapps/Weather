@@ -11,7 +11,7 @@ import UIKit
 class WeatherTableViewCell: UITableViewCell {
   
   static let cellIdentifier = "WeatherTableViewCell"
-
+  
   var weather : WeatherItem? {
     didSet {
       guard let weather = weather else { return }
@@ -44,7 +44,7 @@ class WeatherTableViewCell: UITableViewCell {
     addSubview(weatherTemperatureLabel)
     
     weatherDateLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 8, paddingLeft: 10, paddingBottom: 16, paddingRight: 0, width: frame.size.width / 2, height: 0, enableInsets: false)
-
+    
     weatherTemperatureLabel.anchor(top: weatherDateLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 10, paddingBottom: 8, paddingRight: 0, width: frame.size.width / 2, height: 0, enableInsets: false)
   }
   
