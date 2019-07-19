@@ -15,7 +15,7 @@ class WeatherTableViewCell: UITableViewCell {
   var weather : WeatherForecast? {
     didSet {
       guard let weather = weather else { return }
-      weatherDateLabel.text = convertDateToString(weather.a_date)
+      weatherDateLabel.text = weather.a_date.convertDateToString()
       weatherTemperatureLabel.text = String(weather.a_temperature) + " °C"
     }
   }

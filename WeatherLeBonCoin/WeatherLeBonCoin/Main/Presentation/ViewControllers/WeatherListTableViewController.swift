@@ -63,8 +63,9 @@ class WeatherListTableViewController: UITableViewController {
     tableView.register(WeatherTableViewCell.self, forCellReuseIdentifier: WeatherTableViewCell.cellIdentifier)
   }
   
-  // TODO: Add method to refresh location ⚠️
-  @objc func refrechLocationRequest() { }
+  @objc func refrechLocationRequest() {
+    fetchWeatherList()
+  }
   
   // MARK: - Request methods
   func fetchWeatherList() {
@@ -72,12 +73,7 @@ class WeatherListTableViewController: UITableViewController {
     guard let presenter = presenter else {
       return
     }
-    
-    if presenter.isGeolocEnabled {
-      presenter.fetchWeatherFromCurrentLocation()
-    } else {
-      presenter.fetchWeatherFrom(location)
-    }
+    presenter.fetchWeatherFromCurrentLocation()
   }
   
   // MARK: - Private methods

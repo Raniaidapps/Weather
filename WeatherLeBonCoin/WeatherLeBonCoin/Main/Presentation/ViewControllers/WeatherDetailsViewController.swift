@@ -48,15 +48,15 @@ class WeatherDetailsViewController: UIViewController {
     lbl.textAlignment = .left
     return lbl
   }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      setNavigationBarAndView()
-      setupLayout()
-    }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setNavigationBarAndView()
+    setupLayout()
+  }
   
   func updateViewDetails() {
-    weatherDateLabel.text = "Date : \(convertDateToString(weather.a_date))"
+    weatherDateLabel.text = "Date : \(weather.a_date.convertDateToString()))"
     weatherRainLabel.text = "Pluie : \(weather.a_rain)"
     weatherWindLabel.text = "Vents : \(weather.a_wind)"
   }
@@ -75,15 +75,5 @@ class WeatherDetailsViewController: UIViewController {
     
     stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-  }
-  
-  /// Method to convert date to string
-  private func convertDateToString(_ date: Date) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateStyle = .medium
-    dateFormatter.timeStyle = .short
-    dateFormatter.locale = Locale(identifier: "fr_FR")
-    
-    return dateFormatter.string(from: date)
   }
 }

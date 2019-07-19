@@ -10,12 +10,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherLeBonCoin/Core Data/CoreDataService.swift"
-            timestampString = "585213033.462672"
+            timestampString = "585214665.376866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "retrieveData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherLeBonCoin/Main/Presentation/Router/WeatherRouter.swift"
+            timestampString = "585214665.376954"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "presentPopupLocation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherLeBonCoin/Main/Presentation/Router/WeatherRouter.swift"
+            timestampString = "585214665.377013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "presentPopupLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherLeBonCoin.WeatherRouter.presentPopupLocation() -&gt; ()"
+                  moduleName = "WeatherLeBonCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranianajah/Documents/TestLeBonCoin/WeatherLeBonCoin/WeatherLeBonCoin/Main/Presentation/Router/WeatherRouter.swift"
+                  timestampString = "585214417.926569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UIAlertAction) -&gt; () in WeatherLeBonCoin.WeatherRouter.presentPopupLocation() -&gt; ()"
+                  moduleName = "WeatherLeBonCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranianajah/Documents/TestLeBonCoin/WeatherLeBonCoin/WeatherLeBonCoin/Main/Presentation/Router/WeatherRouter.swift"
+                  timestampString = "585214417.928351"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherLeBonCoin/Main/Presentation/Router/WeatherRouter.swift"
+            timestampString = "585214665.377066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "presentPopupLocation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
