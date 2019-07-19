@@ -12,9 +12,6 @@ import CoreLocation
 
 struct WeatherManager {
   
-  // Fetch Departments validity cache time
-  private static let weatherCacheValidityTime: TimeInterval = Date.oneHour
-  
   // MARK: - Web Services
   
   /// Get the weather list for given location

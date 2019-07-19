@@ -1,0 +1,179 @@
+
+{
+  "request_state": 200,
+  "request_key": "fd543c77e33d6c8a5e218e948a19e487",
+  "message": "OK",
+  "model_run": "02",
+  "source": "internal:GFS:1",
+  "2019-07-17 05:00:00": {
+    "temperature": {
+      "2m": 288.5,
+      "sol": 289,
+      "500hPa": -0.1,
+      "850hPa": -0.1
+    },
+    "pression": {
+      "niveau_de_la_mer": 101600
+    },
+    "pluie": 0,
+    "pluie_convective": 0,
+    "humidite": {
+      "2m": 76.9
+    },
+    "vent_moyen": {
+      "10m": 4.4
+    },
+    "vent_rafales": {
+      "10m": 5.4
+    },
+    "vent_direction": {
+      "10m": 417
+    },
+    "iso_zero": 3517,
+    "risque_neige": "non",
+    "cape": 0,
+    "nebulosite": {
+      "haute": 55,
+      "moyenne": 0,
+      "basse": 0,
+      "totale": 55
+    }
+  },
+  "2019-07-17 08:00:00": {
+    "temperature": {
+      "2m": 290.3,
+      "sol": 289.4,
+      "500hPa": -0.1,
+      "850hPa": -0.1
+    },
+    "pression": {
+      "niveau_de_la_mer": 101600
+    },
+    "pluie": 0,
+    "pluie_convective": 0,
+    "humidite": {
+      "2m": 68.4
+    },
+    "vent_moyen": {
+      "10m": 3.1
+    },
+    "vent_rafales": {
+      "10m": 4.4
+    },
+    "vent_direction": {
+      "10m": 426
+    },
+    "iso_zero": 3426,
+    "risque_neige": "non",
+    "cape": 0,
+    "nebulosite": {
+      "haute": 73,
+      "moyenne": 0,
+      "basse": 0,
+      "totale": 73
+    }
+  },
+  "2019-07-17 11:00:00": {
+    "temperature": {
+      "2m": 296.8,
+      "sol": 293.8,
+      "500hPa": -0.1,
+      "850hPa": -0.1
+    },
+    "pression": {
+      "niveau_de_la_mer": 101570
+    },
+    "pluie": 0,
+    "pluie_convective": 0,
+    "humidite": {
+      "2m": 46.4
+    },
+    "vent_moyen": {
+      "10m": 0.6
+    },
+    "vent_rafales": {
+      "10m": 2.3
+    },
+    "vent_direction": {
+      "10m": 530
+    },
+    "iso_zero": 3371,
+    "risque_neige": "non",
+    "cape": 0,
+    "nebulosite": {
+      "haute": 14,
+      "moyenne": 0,
+      "basse": 0,
+      "totale": 14
+    }
+  },
+  "2019-07-17 14:00:00": {
+    "temperature": {
+      "2m": 301.4,
+      "sol": 297.2,
+      "500hPa": -0.1,
+      "850hPa": -0.1
+    },
+    "pression": {
+      "niveau_de_la_mer": 101470
+    },
+    "pluie": 0,
+    "pluie_convective": 0,
+    "humidite": {
+      "2m": 34.8
+    },
+    "vent_moyen": {
+      "10m": 2.2
+    },
+    "vent_rafales": {
+      "10m": 8.3
+    },
+    "vent_direction": {
+      "10m": 226
+    },
+    "iso_zero": 3385,
+    "risque_neige": "non",
+    "cape": 0,
+    "nebulosite": {
+      "haute": 21,
+      "moyenne": 0,
+      "basse": 0,
+      "totale": 21
+    }
+  },
+  "2019-07-17 17:00:00": {
+    "temperature": {
+      "2m": 299.9,
+      "sol": 299.1,
+      "500hPa": -0.1,
+      "850hPa": -0.1
+    },
+    "pression": {
+      "niveau_de_la_mer": 101390
+    },
+    "pluie": 0,
+    "pluie_convective": 0,
+    "humidite": {
+      "2m": 37.1
+    },
+    "vent_moyen": {
+      "10m": 3.4
+    },
+    "vent_rafales": {
+      "10m": 7.4
+    },
+    "vent_direction": {
+      "10m": 376
+    },
+    "iso_zero": 3465,
+    "risque_neige": "non",
+    "cape": 0,
+    "nebulosite": {
+      "haute": 88,
+      "moyenne": 0,
+      "basse": 61,
+      "totale": 92
+    }
+  }
+}
+
