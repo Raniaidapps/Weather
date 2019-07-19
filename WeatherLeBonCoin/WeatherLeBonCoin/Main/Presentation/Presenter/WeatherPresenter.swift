@@ -18,7 +18,7 @@ protocol WeatherPresenterPresenterProtocol: class {
 }
 
 class WeatherPresenter: WeatherPresenterPresenterProtocol {
-  
+
   //Reference to the View (weak to avoid retain cycle).
   private(set) weak var view: WeatherViewProtocol?
   var isGeolocEnabled: Bool {
@@ -49,6 +49,9 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
         
       }
     }) { (error) in
+      WeatherManager.retrieveData{ [weak self] forecasts in
+        self?.view?.didFetchWeatherSuccess(forecasts)
+      }
       self.view?.didFetchWeatherFailure(error)
     }
   }

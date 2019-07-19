@@ -25,7 +25,6 @@ struct WeatherManager {
                              succes: FetchWeatherSuccess? = nil,
                              failure: Failure? = nil) {
     
-   
     WeatherWebService.fetchWeatherFrom(location, succes, failure)
   }
   

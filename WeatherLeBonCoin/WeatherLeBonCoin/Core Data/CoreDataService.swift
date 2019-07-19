@@ -50,13 +50,17 @@ class CoreDataService {
   
   /// Get wheather from WS and save it ( To call savecontext once) .
   /// - Parameter items: [WeatherItem]
-
+  
   func getAndSaveWeatherFromWS(_ items: [WeatherItem]) {
-    self.context.performAndWait {
+    CoreDataService.shared.persistentContainer.performBackgroundTask { context in
       items.forEach({ item in
-        self.addWeather(with: item.date, temperature: item.temperature, rain: item.rain, wind: item.wind, snow: item.snow, context: self.context)
+        self.addWeather(with: item.date, temperature: item.temperature, rain: item.rain, wind: item.wind, snow: item.snow, context: context)
       })
-      self.saveContext()
+      do {
+        try context.save()
+      } catch {
+        
+      }
     }
   }
   
@@ -75,17 +79,16 @@ class CoreDataService {
   // MARK: - update/delete
   
   func deleteAllData() {
-    
-    let fetchRequest = NSFetchRequest<WeatherForecast>(entityName: "WeatherForecast")
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "WeatherForecast")
     fetchRequest.returnsObjectsAsFaults = false
-    do {
-      let results = try context.fetch(fetchRequest)
-      
-      for object in results {
-        context.delete(object)
+    
+    let request = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+    CoreDataService.shared.persistentContainer.performBackgroundTask { (context) in
+      do {
+        try context.execute(request)
+      } catch let error {
+        print("Detele all data", error)
       }
-    } catch let error {
-      print("Detele all data", error)
     }
   }
   

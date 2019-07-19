@@ -113,6 +113,10 @@ class WeatherListTableViewController: UITableViewController {
 // MARK: - WeatherViewProtocol
 extension WeatherListTableViewController: WeatherViewProtocol {
   
+  func fetchFromDataBase(_ items: [WeatherForecast]?) {
+    self.weatherItems = items
+  }
+  
   func locationAuthorizationStatusDidChange() {
     fetchWeatherList()
   }
