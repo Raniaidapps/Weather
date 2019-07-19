@@ -110,6 +110,7 @@ class WeatherListTableViewController: UITableViewController {
   }
 }
 
+// MARK: - WeatherViewProtocol
 extension WeatherListTableViewController: WeatherViewProtocol {
   
   func locationAuthorizationStatusDidChange() {

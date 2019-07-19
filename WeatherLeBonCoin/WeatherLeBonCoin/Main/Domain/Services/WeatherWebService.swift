@@ -39,7 +39,12 @@ class  WeatherWebService {
   }()
   
   // MARK: - Methods
+  
   /// Fetch Weather from given location
+  /// - Parameters:
+  ///   - location: CLLocation -
+  ///   - success: FetchWeatherSuccess? - Handler for fetch response success.
+  ///   - failure: Failure? - Handler for fetch response failure which gives an Error if occured.
   static func fetchWeatherFrom( _ location: CLLocation,
                                 _ success: FetchWeatherSuccess? = nil,
                                 _ failure: Failure? = nil ) {

@@ -36,16 +36,6 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
     NotificationCenter.default.removeObserver(self)
   }
   
-  func requestAuthorization() {
-    NotificationCenter.default.addObserver(self, selector: #selector(locationAuthorizationStatusDidChange),
-                                           name: NSNotification.Name(rawValue: LocationAuthorizationStatusChangedNotification),
-                                           object: nil)
-    
-    LocationServiceManager.shared.requestAuthorization()
-    
-    view?.didRequestLocationAuthorization()
-  }
-  
   /// Fetch Weather from given location
   func fetchWeatherFrom(_ location: CLLocation?) {
     
@@ -76,6 +66,16 @@ class WeatherPresenter: WeatherPresenterPresenterProtocol {
         self?.view?.didFetchWeatherFailure(error)
       }
     }
+  }
+  
+  func requestAuthorization() {
+    NotificationCenter.default.addObserver(self, selector: #selector(locationAuthorizationStatusDidChange),
+                                           name: NSNotification.Name(rawValue: LocationAuthorizationStatusChangedNotification),
+                                           object: nil)
+    
+    LocationServiceManager.shared.requestAuthorization()
+    
+    view?.didRequestLocationAuthorization()
   }
   
   @objc func locationAuthorizationStatusDidChange() {

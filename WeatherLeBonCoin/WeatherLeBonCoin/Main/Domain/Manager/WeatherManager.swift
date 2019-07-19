@@ -29,10 +29,14 @@ struct WeatherManager {
     WeatherWebService.fetchWeatherFrom(location, succes, failure)
   }
   
+  // MARK: - DAO
+  
+  /// Clear the cache from DB
   static func clearCurrentWeatherCache() {
     CoreDataService.shared.deleteAllData()
   }
   
+  /// Get the weather from WS and save it in DB
   static func saveWeatherInCache(with items: [WeatherItem]) {
     
     clearCurrentWeatherCache()

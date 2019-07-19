@@ -10,6 +10,8 @@ import UIKit
 
 class WeatherDetailsViewController: UIViewController {
   
+  // MARK: - Properties
+  
   var weather : WeatherForecast! {
     didSet {
       updateViewDetails()
@@ -49,19 +51,16 @@ class WeatherDetailsViewController: UIViewController {
     return lbl
   }()
   
+  // MARK: - Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setNavigationBarAndView()
     setupLayout()
   }
   
-  func updateViewDetails() {
-    weatherDateLabel.text = "Date : \(weather.a_date.convertDateToString()))"
-    weatherRainLabel.text = "Pluie : \(weather.a_rain)"
-    weatherWindLabel.text = "Vents : \(weather.a_wind)"
-  }
-  
   // MARK: - Set up
+  
   func setNavigationBarAndView() {
     self.view.backgroundColor = .white
     self.navigationController?.navigationBar.topItem?.title = " \(weather.a_temperature) °C"
@@ -75,5 +74,11 @@ class WeatherDetailsViewController: UIViewController {
     
     stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+  }
+  
+  func updateViewDetails() {
+    weatherDateLabel.text = "Date : \(weather.a_date.convertDateToString()))"
+    weatherRainLabel.text = "Pluie : \(weather.a_rain)"
+    weatherWindLabel.text = "Vents : \(weather.a_wind)"
   }
 }

@@ -115,7 +115,6 @@
 			children = (
 				9358572522E0916E004A4208 /* WeatherForecast+CoreDataClass.swift */,
 				9358572622E0916E004A4208 /* WeatherForecast+CoreDataProperties.swift */,
-				937F86BA22E08909002E06F6 /* Entities */,
 				937F86BB22E0891D002E06F6 /* CoreDataService.swift */,
 			);
 			path = "Core Data";
@@ -266,13 +265,6 @@
 				936C008922E06B77000E50C8 /* WeatherTableViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		937F86BA22E08909002E06F6 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		93BA37D522DF5BFC002EBF9A = {
